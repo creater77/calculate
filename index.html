@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./img/logo.jpg" type="image/png">
+    <title>Матричний калькулятор</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="calculator">
+      <header>
+        <h1>Матричний калькулятор</h1>
+      </header>
+
+      <div class="container">
+        <div class="inner-content">
+          <nav>
+            <ul class="operations">
+              <div class="bg-img">
+                <img src="./img/logo.jpg" alt="matrix">
+              </div>
+                <li class="button-operation" data-value="Метод Гауса">
+                  <span class="arrow-right"><img src="./img/right-arrow.png" alt="right-arrow"></span>
+                  Метод Гауса
+                </li>
+                <li class="button-operation" data-value="Метод Крамера">
+                  <span class="arrow-right"><img src="./img/right-arrow.png" alt="right-arrow"></span>
+                  Метод Крамера
+                </li>
+                <li class="button-operation hide" data-value="Матричний Метод">
+                  <span class="arrow-right"><img src="./img/right-arrow.png" alt="right-arrow"></span>
+                  Матричний Метод
+                </li>
+              <li class="button-operation" data-value="Ранг матриці">
+                <span class="arrow-right"><img src="./img/right-arrow.png" alt="right-arrow"></span>
+                Ранг матриці
+              </li>
+              <li class="button-operation" data-value="Визначник матриці">
+                <span class="arrow-right"><img src="./img/right-arrow.png" alt="right-arrow"></span>
+                Визначник матриці
+              </li>
+              <li class="button-operation" data-value="Обернена матриця">
+                <span class="arrow-right"><img src="./img/right-arrow.png" alt="right-arrow"></span>
+                Обернена матриця
+              </li>
+              <li class="button-operation" data-value="Піднесення матриці до степеню">
+                <span class="arrow-right"><img src="./img/right-arrow.png" alt="right-arrow"></span>
+                Піднесення матриці до степеню
+              </li>
+              <li class="button-operation" data-value="Транспонування матриці">
+                <span class="arrow-right"><img src="./img/right-arrow.png" alt="right-arrow"></span>
+                Транспонування матриці
+              </li>
+              <li class="button-operation" data-value="Множення матриць">
+                <span class="arrow-right"><img src="./img/right-arrow.png" alt="right-arrow"></span>
+                Множення матриць
+              </li>
+              <li class="button-operation" data-value="Додавання / Віднімання матриць">
+                <span class="arrow-right"><img src="./img/right-arrow.png" alt="right-arrow"></span>
+                Додавання / Віднімання матриць
+              </li>
+            </ul>
+          </nav>
+
+          <div class="operations_matrix">
+              <span id="name_operation"></span>
+              <span id="instruction">Про метод
+                <button class="bottom" type="button" name="button">
+                  <img src="./img/arrow-bottom.png" alt="arrow-bottom">
+                </button>
+              </span>
+
+              <!-- instruction to method -->
+              <!-- 3 -->
+              <div class="about_method_3 about_method">
+                <head>
+                  <h1>Ранг матриці</h1>
+                </head>
+                <ul>
+                  <li>1. Ранг матриці дорівнює кількості ненульових рядків після приведення матриці до ступінчастого вигляду, використовуючи елементарні перетворення над рядками і стовпцями матриці.</li>
+                  <li>2. Якщо в матриці A знайдений ненульовий мінор k -го порядку M. Розглянемо всі мінори ( k  + 1) -го порядку, що включають в себе (оздоблюють) мінор M; якщо всі вони рівні нулю, то ранг матриці дорівнює k . Якщо серед оздоблюють мінорів знайдеться ненульовий, то вся процедура повторюється.</li>
+                </ul>
+                <p>Приклад</p>
+                <div class="example3">
+                  <li>Обчислити ранг матриці А, де: </li>
+                  <img src="./img/matrix3.png" alt="matrix3">
+                  <li>від 1-го рядка віднімемо 2-гий помноженй на 2, від 4-ого відняти 2-гий помноженй на 2</li>
+                  <img src="./img/example3-2.png" alt="example3-2" height="100px">
+                  <li>поміняємо місцями рядки</li>
+                  <img src="./img/example3-3.png" alt="example3-3" height="100px">
+                  <li>отримана матриця є ступінчастою, отже rank (A) = 3</li>
+                </div>
+
+                <img id="top6" src="./img/top-arrow.png" alt="top-arrow">
+              </div>
+
+              <!-- 4 -->
+              <div class="about_method_4 about_method">
+                <head>
+                  <h1>Визначник матриці</h1>
+                </head>
+                <ul>
+                  <li>1. Визначник одиничної матриці дорівнює одиниці.</li>
+                  <li>2. Визначник матриці з двома рівними рядками (стовпцями) дорівнює нулю.</li>
+                  <li>3. Визначник матриці з двома пропорційними рядками (стовпцями) дорівнює нулю.</li>
+                  <li>4. Визначник матриці, що містить нульовий рядок (стовпець), дорівнює нулю.</li>
+                  <li>5. Визначник матриці дорівнює нулю якщо дві (або декілька) рядків (стовпців) матриці лінійно залежні.</li>
+                  <li>6. Визначник матриці не зміниться, якщо до якоїсь його рядку (стовпцю) додати інший рядок (стовпець), помножену на деяке число.</li>
+                  <p>Властивості визначника матриці</p>
+                  <li> - Для матриці першого порядку значення визначника дорівнює значенню елемента цієї матриці</li>
+                  <img src="./img/example4-1.png" alt="example4-1">
+                  <li> - Для матриці 2 × 2 значення визначника дорівнює різниці добутків елементів головної та побічної діагоналей</li>
+                  <img src="./img/example4-2.png" alt="example4-2">
+                </ul>
+                <p>Приклад</p>
+                <div class="example4">
+                  <li>Знайти визначник матриці A</li>
+                  <img src="./img/example4-3.png" alt="example4-3">
+                  <img src="./img/example4-4.png" alt="example4-4">
+                </div>
+
+                <img id="top5" src="./img/top-arrow.png" alt="top-arrow">
+              </div>
+
+              <!-- 5 -->
+              <div class="about_method_5 about_method">
+                <head>
+                  <h1>Обернена матриця</h1>
+                </head>
+                <ul>
+                  <li>1. Обернена матриця існує тільки для квадратних матриць визначник яких не дорівнює нулю.</li>
+                  <p>Властивість оберненої матриці </p>
+                  <img src="./img/example5-1.png" alt="example5-1">
+                </ul>
+                <p>Приклад</p>
+                <div class="example5">
+                  <li>Найти обернену матрицю матриці A</li>
+                  <img src="./img/example5-2.png" alt="example5-2">
+                  <li>Знайдемо визначник матриці</li>
+                  <img src="./img/example5-4.png" alt="example5-4">
+                  <li>Знайти алгебраїчні доповнення матриці A</li>
+                  <img src="./img/example5-5.png" alt="example5-5">
+                  <li>Запишемо союзну матрицю</li>
+                  <img src="./img/example5-6.png" alt="example5-6">
+                  <li>Знайдемо обернену матрицю</li>
+                  <img src="./img/example5-7.png" alt="example5-7">
+                  <li>Відповідь</li>
+                  <img src="./img/example5-8.png" alt="example5-8">
+                </div>
+
+                <img id="top4" src="./img/top-arrow.png" alt="top-arrow">
+              </div>
+
+              <!-- 6 -->
+              <div class="about_method_6 about_method">
+                <head>
+                  <h1>Піднесення матриці до степеню</h1>
+                </head>
+                <ul>
+                  <li>1. Суть операції піднесення матриці до степеня полягає в множенні матриці саму на себе n-ну кількість разів.</li>
+                  <li>2. Для піднесення матриці до степеню необхідно, щоб матриця була квадратною.</li>
+                  <p>Властивість піднесення матриці до степеню</p>
+                  <h3 class="m">A<sup>n</sup> = A * A * A * A... і т.д</h3>
+                  <h3>A<sup>2</sup> = A * A</h3>
+                  <h3>A<sup>3</sup> = A * A * A</h3>
+                </ul>
+                <p>Приклад</p>
+                <div class="example6">
+                  <img src="./img/matrix6.png" alt="matrix6" width="300px" height="80px">
+                </div>
+
+                <img id="top" src="./img/top-arrow.png" alt="top-arrow">
+              </div>
+
+              <!-- 7 -->
+              <div class="about_method_7 about_method">
+                <head>
+                  <h1>Транспонування матриці</h1>
+                </head>
+                <ul>
+                  <li>1. Транспонування матриці - це операція над матрицею, при якій її рядки і стовпці міняються місцями</li>
+                  <img class="img7" src="./img/method7.png" alt="method7">
+                  <p>Властивість транспонування матриці</p>
+                  <li>Якщо матриця А має розмір <strong>n</strong>x<strong>m</strong>, тоді транспонована матриця A<sup>T</sup> матиме розмір <strong>m</strong>x<strong>n</strong> </li>
+                  <img class="img7" src="./img/example7.png" alt="example7">
+                </ul>
+                  <p>Приклад</p>
+                  <div class="example7">
+                    <li>Знайти трансоновану матрицю A<sup>T</sup> для матриці - <img src="./img/matrixA7.png" alt="matrixA7" height="50px"></li>
+                    <img src="./img/example72.png" alt="example72" height="80px">
+                  </div>
+
+                  <img id="top3" src="./img/top-arrow.png" alt="top-arrow">
+              </div>
+
+              <!-- 8 -->
+              <div class="about_method_8 about_method">
+                <head>
+                  <h1>Множення матриць</h1>
+                </head>
+                <ul>
+                  <li>1. Множення матриць можливо тільки в тому випадку, коли кількість стовпців 1-ої дорівнює кількості рядків 2-ої.</li>
+                  <li>2. В результаті виходить нова матриця, число рядків якої дорівнює числу рядків 1-ої, а число стовпців - числу стовпців 2-ої.</li>
+                  <li>3. Наприклад, якщо помножити матриці розміру n x k на k x m, то в результаті ми отримаємо нову з розмірністю n x m.</li>
+                  <p>Властивість множення матриці</p>
+                  <li class="m">(A · B) · C= A · (B · C) - створення матриць асоціативно</li>
+                  <li class="m">(z · A) · B= z · (A · B), де z - число</li>
+                </ul>
+                <p>Приклад</p>
+                <div class="example8">
+                  <img src="./img/matrix8.png" width="500px" height="60px" alt="matrix8">
+                  <img src="./img/matrix8-2.png" width="300px" height="60px" alt="matrix8(2)">
+                </div>
+
+                <img id="top1" src="./img/top-arrow.png" alt="top-arrow">
+              </div>
+
+              <!-- 9 -->
+              <div class="about_method_9 about_method">
+                <head>
+                  <h1>Додавання/Віднімання матриць</h1>
+                </head>
+                <ul>
+                  <li>1. Додавати і віднімати можна матриці одного розміру в результаті виходить матриця того ж розміру.</li>
+                  <li>2. Додавання матриць (сума матриць) A + B це -  операція обчислення матриці C, всі елементи якої рівні попарній сумі всіх відповідних елементів матриць A і B, тобто кожен елемент матриці C дорівнює:</li>
+                  <img class="img9 down" src="./img/img9-1.png" alt="img9-1" width="100px" height="40px">
+                  <li>3. Віднімання матриць (різниця матриць) A - B це - операція обчислення матриці C, всі елементи якої рівні попарной різниці всіх відповідних елементів матриць A і B, тобто кожен елемент матриці C дорівнює:</li>
+                  <img class="img9" src="./img/img9-2.png" alt="img9-2" width="100px" height="40px">
+                  <p>Властивість для додавання.віднімання матриць</p>
+                  <img class="img9" src="./img/formula.png" alt="formula" width="250px" height="80px">
+                </ul>
+                <p>Приклад</p>
+                <div class="example9">
+                  <img src="./img/example9.png" alt="example9" width="300px" height="90px">
+                </div>
+
+                <img id="top2" src="./img/top-arrow.png" alt="top-arrow">
+              </div>
+
+            <div class="matrix">
+
+              <article id="method"></article>
+            </div>
+
+            <div class="decision">
+              <span id="end_solve"></span>
+                <table id="tableSolve"></table>
+              <span id="rank"></span>
+              <button id="btnrmAnswer" disabled="true">Очистити відповідь</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="script/script.js" charset="utf-8"></script>
+  </body>
+</html>
